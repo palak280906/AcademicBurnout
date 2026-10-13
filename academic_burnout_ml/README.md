@@ -5,6 +5,11 @@
 > **Amity School of Engineering and Technology, Amity University Jharkhand, Ranchi**  
 > **Enrollment No:** A910119819008 | **Date:** October 2026  
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel%20App-0070F3?style=for-the-badge&logo=vercel&logoColor=white)](https://academic-burnout.vercel.app/)
+[![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+
+🌐 **Live Deployed Portal:** [https://academic-burnout.vercel.app/](https://academic-burnout.vercel.app/)
+
 ---
 
 ## 📌 Project Overview
