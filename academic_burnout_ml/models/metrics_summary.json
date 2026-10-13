@@ -1,0 +1,216 @@
+{
+    "dataset_stats": {
+        "total_samples": 3000,
+        "features_count": 20,
+        "stress_level_distribution": {
+            "Medium": 1431,
+            "Low": 1243,
+            "High": 326
+        },
+        "stress_score_stats": {
+            "mean": 11.916333333333334,
+            "std": 6.786212796319304,
+            "min": -9.0,
+            "max": 33.0
+        }
+    },
+    "classification": {
+        "best_model_name": "Logistic Regression",
+        "cv_results": {
+            "Random Forest": {
+                "accuracy_mean": 0.8516666666666668,
+                "accuracy_std": 0.007817359599705706,
+                "f1_macro_mean": 0.7944926677398704,
+                "f1_macro_std": 0.007353683823597173,
+                "f1_weighted_mean": 0.8459412335586691,
+                "precision_macro_mean": 0.8909078419062432,
+                "recall_macro_mean": 0.7564917621662145
+            },
+            "Gradient Boosting": {
+                "accuracy_mean": 0.9023333333333333,
+                "accuracy_std": 0.008339997335464528,
+                "f1_macro_mean": 0.8723709699110465,
+                "f1_macro_std": 0.019131333991936738,
+                "f1_weighted_mean": 0.9007052732423194,
+                "precision_macro_mean": 0.9131079192772372,
+                "recall_macro_mean": 0.8465750623659206
+            },
+            "Extra Trees": {
+                "accuracy_mean": 0.8540000000000001,
+                "accuracy_std": 0.013106402167558302,
+                "f1_macro_mean": 0.7801223416669189,
+                "f1_macro_std": 0.03089107837077573,
+                "f1_weighted_mean": 0.8453755151353469,
+                "precision_macro_mean": 0.9021312999136365,
+                "recall_macro_mean": 0.7425909490856928
+            },
+            "Support Vector Machine": {
+                "accuracy_mean": 0.9473333333333332,
+                "accuracy_std": 0.00885688683705761,
+                "f1_macro_mean": 0.9377055013858546,
+                "f1_macro_std": 0.0108092607891404,
+                "f1_weighted_mean": 0.9471281232121038,
+                "precision_macro_mean": 0.953574623317069,
+                "recall_macro_mean": 0.9246468962130191
+            },
+            "Logistic Regression": {
+                "accuracy_mean": 0.9950000000000001,
+                "accuracy_std": 0.0010540925533894842,
+                "f1_macro_mean": 0.990903316083409,
+                "f1_macro_std": 0.0021244577908390567,
+                "f1_weighted_mean": 0.9949870884795526,
+                "precision_macro_mean": 0.9933166406264347,
+                "recall_macro_mean": 0.9885753434210679
+            },
+            "K-Nearest Neighbors": {
+                "accuracy_mean": 0.8366666666666667,
+                "accuracy_std": 0.01738453974720706,
+                "f1_macro_mean": 0.7815701621091447,
+                "f1_macro_std": 0.009413211359240862,
+                "f1_weighted_mean": 0.8318466404889839,
+                "precision_macro_mean": 0.8531328744664979,
+                "recall_macro_mean": 0.7494919312016656
+            },
+            "Multi-Layer Perceptron": {
+                "accuracy_mean": 0.9753333333333332,
+                "accuracy_std": 0.00339934634239519,
+                "f1_macro_mean": 0.959367810541036,
+                "f1_macro_std": 0.005154301171725841,
+                "f1_weighted_mean": 0.9752949140427145,
+                "precision_macro_mean": 0.9617692013494296,
+                "recall_macro_mean": 0.9571167889046801
+            }
+        },
+        "test_accuracy": 0.995,
+        "test_f1_macro": 0.9903868538171858,
+        "test_f1_weighted": 0.9949539883601506,
+        "report_dict": {
+            "High": {
+                "precision": 1.0,
+                "recall": 0.9538461538461539,
+                "f1-score": 0.9763779527559056,
+                "support": 65.0
+            },
+            "Low": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1-score": 1.0,
+                "support": 249.0
+            },
+            "Medium": {
+                "precision": 0.9896193771626297,
+                "recall": 1.0,
+                "f1-score": 0.9947826086956522,
+                "support": 286.0
+            },
+            "accuracy": 0.995,
+            "macro avg": {
+                "precision": 0.9965397923875433,
+                "recall": 0.9846153846153847,
+                "f1-score": 0.9903868538171858,
+                "support": 600.0
+            },
+            "weighted avg": {
+                "precision": 0.9950519031141869,
+                "recall": 0.995,
+                "f1-score": 0.9949539883601506,
+                "support": 600.0
+            }
+        },
+        "confusion_matrix": [
+            [
+                249,
+                0,
+                0
+            ],
+            [
+                0,
+                286,
+                0
+            ],
+            [
+                0,
+                3,
+                62
+            ]
+        ],
+        "top_features": [
+            {
+                "Feature": "Anxiety_Level",
+                "Importance": 3.166580794208759
+            },
+            {
+                "Feature": "Assignment_Load",
+                "Importance": 2.773436614846298
+            },
+            {
+                "Feature": "Exam_Frequency",
+                "Importance": 2.759430380941215
+            },
+            {
+                "Feature": "Lifestyle_Balance_Score",
+                "Importance": 2.469071469808229
+            },
+            {
+                "Feature": "Family_Support",
+                "Importance": 2.3612861524699453
+            },
+            {
+                "Feature": "Screen_Time",
+                "Importance": 2.02955027500837
+            },
+            {
+                "Feature": "Social_Media_Use",
+                "Importance": 1.780997890605691
+            },
+            {
+                "Feature": "Social_Support_Deficit",
+                "Importance": 1.1023887928457634
+            },
+            {
+                "Feature": "Peer_Pressure",
+                "Importance": 0.8113259851531539
+            },
+            {
+                "Feature": "Academic_Pressure_Index",
+                "Importance": 0.7201612990205607
+            },
+            {
+                "Feature": "Physical_Exercise_Yes",
+                "Importance": 0.6282265386078213
+            },
+            {
+                "Feature": "Screen_Sleep_Ratio",
+                "Importance": 0.47347194593130654
+            },
+            {
+                "Feature": "Sleep_Hours",
+                "Importance": 0.299800846439164
+            },
+            {
+                "Feature": "University_Type_Private University",
+                "Importance": 0.15086216081253898
+            }
+        ]
+    },
+    "regression": {
+        "best_regressor_name": "Ridge Regression",
+        "reg_results": {
+            "Ridge Regression": {
+                "R2": 0.9999992513025932,
+                "MAE": 0.004532105732615806,
+                "RMSE": 0.005705038578318825
+            },
+            "Random Forest Regressor": {
+                "R2": 0.931360604711547,
+                "MAE": 1.3662451940149476,
+                "RMSE": 1.7273969379500043
+            },
+            "Gradient Boosting Regressor": {
+                "R2": 0.9836812263241153,
+                "MAE": 0.6620183461062764,
+                "RMSE": 0.8422658272510193
+            }
+        }
+    }
+}
