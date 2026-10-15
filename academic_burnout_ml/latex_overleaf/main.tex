@@ -18,7 +18,7 @@
 \usepackage{listings}
 \usepackage{xcolor}
 \usepackage{float}
-\usepackage{microtype}
+% \usepackage{microtype} % Disabled to prevent Overleaf free tier compilation timeouts
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage{tocloft}
@@ -39,6 +39,7 @@
     numberstyle=\tiny\color{codegray},
     stringstyle=\color{codepurple},
     basicstyle=\ttfamily\footnotesize,
+    columns=flexible,
     breakatwhitespace=false,         
     breaklines=true,                 
     captionpos=b,                    
@@ -203,9 +204,9 @@ Place: Ranchi, Jharkhand
     {\LARGE \textbf{ABSTRACT}}\\[0.8cm]
 \end{center}
 
-Academic burnout represents an escalating psychological and public health crisis across higher education institutions worldwide. Unlike acute academic stress—which acts as a temporary psychological reaction to impending examinations or project submission deadlines—academic burnout is a chronic, multi-dimensional syndrome characterized by persistent emotional exhaustion, severe academic cynicism (depersonalization and detachment from coursework), and a debilitating sense of academic inefficacy. Traditional mental health screening mechanisms deployed across university campuses rely predominantly on retrospective, voluntary clinical self-referral or periodic paper-and-pencil psychometric questionnaires. These legacy methods exhibit profound diagnostic latency, frequently identifying student distress only after catastrophic academic failure, chronic absenteeism, or clinical depression has occurred. Furthermore, pervasive social stigma surrounding mental illness and institutional counseling resource constraints prevent the vast majority of vulnerable students from seeking timely intervention.
+Academic burnout represents an escalating psychological and public health crisis across higher education institutions worldwide. Unlike acute academic stress--which acts as a temporary psychological reaction to impending examinations or project submission deadlines--academic burnout is a chronic, multi-dimensional syndrome characterized by persistent emotional exhaustion, severe academic cynicism (depersonalization and detachment from coursework), and a debilitating sense of academic inefficacy. Traditional mental health screening mechanisms deployed across university campuses rely predominantly on retrospective, voluntary clinical self-referral or periodic paper-and-pencil psychometric questionnaires. These legacy methods exhibit profound diagnostic latency, frequently identifying student distress only after catastrophic academic failure, chronic absenteeism, or clinical depression has occurred. Furthermore, pervasive social stigma surrounding mental illness and institutional counseling resource constraints prevent the vast majority of vulnerable students from seeking timely intervention.
 
-To overcome these structural limitations, this thesis presents an end-to-end, privacy-conscious, multi-dimensional Machine Learning framework for the early detection and predictive risk profiling of academic burnout. Grounded firmly in empirical psychometrics—specifically integrating the \textbf{Maslach Burnout Inventory – Student Survey (MBI-SS)} and the \textbf{Job Demands-Resources (JD-R) Model}—our system captures the dynamic equilibrium between academic demands and restorative personal/social resources across four foundational dimensions: (i) Demographic and Socioeconomic context, (ii) Academic Demands and Curricular Pressure, (iii) Physical Rest and Digital Behaviors, and (iv) Psycho-Social Buffering Resources. 
+To overcome these structural limitations, this thesis presents an end-to-end, privacy-conscious, multi-dimensional Machine Learning framework for the early detection and predictive risk profiling of academic burnout. Grounded firmly in empirical psychometrics--specifically integrating the \textbf{Maslach Burnout Inventory -- Student Survey (MBI-SS)} and the \textbf{Job Demands-Resources (JD-R) Model}--our system captures the dynamic equilibrium between academic demands and restorative personal/social resources across four foundational dimensions: (i) Demographic and Socioeconomic context, (ii) Academic Demands and Curricular Pressure, (iii) Physical Rest and Digital Behaviors, and (iv) Psycho-Social Buffering Resources. 
 
 Operating on a rigorously audited and statistically verified dataset of 3,000 diverse student profiles, we engineer domain-specific interaction indicators, including the \textbf{Academic Pressure Index (API)}, \textbf{Screen-to-Sleep Ratio (SSR)}, \textbf{Social Support Deficit (SSD)}, and \textbf{Lifestyle Balance Score (LBS)}. To prevent data leakage, an isolated Scikit-learn preprocessing pipeline executes standard scaling and one-hot encoding strictly within training folds. We implement and systematically benchmark seven distinct machine learning classifiers across parametric, non-parametric, kernel-based, and ensemble families: Logistic Regression (L2-penalized), Gradient Boosting, Random Forest, Support Vector Classifiers (SVM with Radial Basis Function kernel), Decision Trees (CART), K-Nearest Neighbors (KNN), and Gaussian Naive Bayes. Simultaneously, a continuous regressor based on Ridge Regression ($L_2$ Tikhonov regularization) is developed to output an exact academic stress score ($0$--$100$).
 
@@ -280,7 +281,7 @@ I am deeply indebted to my beloved parents and family members, whose uncondition
 \textbf{AI} & Artificial Intelligence \\
 \textbf{ML} & Machine Learning \\
 \textbf{MBI} & Maslach Burnout Inventory \\
-\textbf{MBI-SS} & Maslach Burnout Inventory – Student Survey \\
+\textbf{MBI-SS} & Maslach Burnout Inventory -- Student Survey \\
 \textbf{JD-R} & Job Demands-Resources Model \\
 \textbf{API} & Academic Pressure Index / Application Programming Interface \\
 \textbf{SSR} & Screen-to-Sleep Ratio \\
@@ -328,11 +329,11 @@ I am deeply indebted to my beloved parents and family members, whose uncondition
 
 \section{Motivation and Socio-Academic Context}
 \label{sec:motivation}
-The contemporary landscape of global higher education has undergone a profound transformation over the preceding decade. Rapid technological acceleration, heightened competitiveness in graduate employment markets, intensive continuous assessment structures, and pervasive hyper-connectivity through digital platforms have converged to subject undergraduate and postgraduate students to unprecedented levels of psychological strain. In universities across both developed and developing economies, students frequently navigate an intricate matrix of competing pressures: dense academic curricula, stringent continuous grading criteria, compulsory research requirements, socio-economic and tuition anxieties, peer competition, and the disruption of restorative biological routines—most notably restorative sleep and physical exercise \cite{bano2022, schaufeli2002}.
+The contemporary landscape of global higher education has undergone a profound transformation over the preceding decade. Rapid technological acceleration, heightened competitiveness in graduate employment markets, intensive continuous assessment structures, and pervasive hyper-connectivity through digital platforms have converged to subject undergraduate and postgraduate students to unprecedented levels of psychological strain. In universities across both developed and developing economies, students frequently navigate an intricate matrix of competing pressures: dense academic curricula, stringent continuous grading criteria, compulsory research requirements, socio-economic and tuition anxieties, peer competition, and the disruption of restorative biological routines--most notably restorative sleep and physical exercise \cite{bano2022, schaufeli2002}.
 
 Empirical epidemiological investigations conducted by the World Health Organization (WHO) and higher education mental health consortia indicate that between $40\%$ and $65\%$ of enrolled university students experience moderate-to-severe psychological distress during their academic lifecycle \cite{who2022mental}. A substantial and alarming proportion of this demographic transitions from experiencing manageable, transient academic stress to succumbing to the debilitating, chronic state known as \textbf{Academic Burnout}. 
 
-The consequences of unmitigated academic burnout are severe and multi-dimensional. At the individual level, affected students suffer from cognitive deficits—including impaired executive function, memory retrieval deficits, decreased concentration, and diminished problem-solving creativity \cite{maslach2001}. Psychologically, burnout acts as a robust gateway to clinical depression, severe generalized anxiety disorder (GAD), suicidal ideation, and substance dependence \cite{dumas2020}. Institutionally, high burnout rates directly drive undergraduate attrition, prolonged degree completion times, academic disciplinary hearings, and diminished institutional reputation \cite{madigan2021}. 
+The consequences of unmitigated academic burnout are severe and multi-dimensional. At the individual level, affected students suffer from cognitive deficits--including impaired executive function, memory retrieval deficits, decreased concentration, and diminished problem-solving creativity \cite{maslach2001}. Psychologically, burnout acts as a robust gateway to clinical depression, severe generalized anxiety disorder (GAD), suicidal ideation, and substance dependence \cite{dumas2020}. Institutionally, high burnout rates directly drive undergraduate attrition, prolonged degree completion times, academic disciplinary hearings, and diminished institutional reputation \cite{madigan2021}. 
 
 Despite the gravity of this crisis, existing university mental health infrastructures remain predominantly reactive, centralized, and sporadic. Standard institutional interventions depend almost entirely on voluntary self-referral to campus counseling centers or periodic, voluntary paper-and-pencil psychometric questionnaires administered during annual health drives. These legacy diagnostic paradigms suffer from catastrophic diagnostic latency: students typically reach out for psychological support only after severe academic failure, chronic non-attendance, or psychological collapse has already materialized. Furthermore, pervasive cultural stigma surrounding mental illness, fear of academic reprisal or parental disappointment, and severe counselor-to-student ratios (often exceeding $1:2,500$ in large universities) prevent the vast majority of vulnerable individuals from receiving timely care.
 
@@ -346,7 +347,7 @@ A persistent source of diagnostic confusion in educational research is the confl
 Stress, within biological and psychological literature, is defined as a non-specific physiological and psychological reaction to an environmental demand, challenge, or threat (the stressor) that exceeds the perceived coping capacity of the individual \cite{selye1976}. In academic contexts, stress is frequently episodic and acute:
 \begin{itemize}
     \item \textbf{Temporal Transience:} Academic stress exhibits a defined temporal lifespan linked to specific triggering events (e.g., mid-term examinations, final dissertation deadlines, viva voce presentations). Upon cessation of the stressor or completion of the academic milestone, the student's physiological homeostasis and emotional equilibrium naturally restore.
-    \item \textbf{Eustress Potential:} At moderate intensities, acute academic stress can function as adaptive ``eustress''—enhancing autonomic alertness, neurocognitive focus, adrenaline mobilization, and short-term working memory capacity according to the Yerkes-Dodson Law of cognitive performance \cite{yerkes1908}.
+    \item \textbf{Eustress Potential:} At moderate intensities, acute academic stress can function as adaptive ``eustress''--enhancing autonomic alertness, neurocognitive focus, adrenaline mobilization, and short-term working memory capacity according to the Yerkes-Dodson Law of cognitive performance \cite{yerkes1908}.
     \item \textbf{Preserved Engagement:} A stressed student remains profoundly engaged and emotionally invested in their academic trajectory. Stressed students experience urgency, heightened anxiety, and over-activation; they desperately wish to succeed and feel that their efforts directly influence their grades.
 \end{itemize}
 
@@ -381,9 +382,9 @@ Table~\ref{tab:stress_vs_burnout} formalizes the critical operational distinctio
 
 \section{Theoretical Psychological Frameworks}
 \label{sec:theoretical_frameworks}
-A primary scientific vulnerability of many contemporary machine learning applications in behavioral sciences is their purely data-driven, agnostic approach—frequently treating input variables as arbitrary numerical tokens devoid of theoretical grounding. In contrast, the feature architecture and risk stratification of this thesis are firmly anchored in two foundational paradigms of behavioral psychology: the \textbf{Maslach Burnout Inventory – Student Survey (MBI-SS)} and the \textbf{Job Demands-Resources (JD-R) Model}.
+A primary scientific vulnerability of many contemporary machine learning applications in behavioral sciences is their purely data-driven, agnostic approach--frequently treating input variables as arbitrary numerical tokens devoid of theoretical grounding. In contrast, the feature architecture and risk stratification of this thesis are firmly anchored in two foundational paradigms of behavioral psychology: the \textbf{Maslach Burnout Inventory -- Student Survey (MBI-SS)} and the \textbf{Job Demands-Resources (JD-R) Model}.
 
-\subsection{Maslach Burnout Inventory – Student Survey (MBI-SS)}
+\subsection{Maslach Burnout Inventory -- Student Survey (MBI-SS)}
 Originally developed by Christina Maslach and Susan Jackson for human services professionals \cite{maslach1981}, the inventory was subsequently adapted and rigorously cross-validated for university student cohorts by Wilmar Schaufeli et al. \cite{schaufeli2002}. The MBI-SS operationalizes academic burnout across three orthogonal sub-constructs:
 \begin{equation}
     \text{Burnout}_{\text{MBI-SS}} = f\Big( \text{Exhaustion (EX)}, \text{Cynicism (CY)}, \text{Academic Inefficacy (IN)} \Big)
@@ -453,7 +454,7 @@ To address the formulated challenge, this major project pursues the following pr
 \subsection{Primary Research Objectives}
 \begin{enumerate}
     \item \textbf{Empirically Grounded Feature Architecture:} To design a 16-parameter student behavioral inventory grounded rigorously in the MBI-SS and JD-R models, capturing academic demands, biological recovery, and social buffering mechanisms.
-    \item \textbf{Domain-Specific Feature Engineering:} To synthesize mathematically formulated interaction features—including the Academic Pressure Index (API), Screen-to-Sleep Ratio (SSR), Social Support Deficit (SSD), and Lifestyle Balance Score (LBS)—to linearize complex non-linear behavioral interactions.
+    \item \textbf{Domain-Specific Feature Engineering:} To synthesize mathematically formulated interaction features--including the Academic Pressure Index (API), Screen-to-Sleep Ratio (SSR), Social Support Deficit (SSD), and Lifestyle Balance Score (LBS)--to linearize complex non-linear behavioral interactions.
     \item \textbf{Multi-Model Algorithmic Benchmarking:} To systematically implement, hyperparameter-tune, and benchmark seven distinct classification paradigms (Logistic Regression, Support Vector Classifiers, Random Forests, Gradient Boosted Decision Trees, Decision Trees, K-Nearest Neighbors, and Gaussian Naive Bayes) across standardized training and hold-out test folds ($n=3,000$).
     \item \textbf{Continuous Stress Regression Engine:} To formulate a regularized continuous estimator using Ridge Regression capable of outputting a calibrated Academic Stress Score on a scale of $0$ to $100$.
     \item \textbf{Full-Stack Production Deployment:} To encapsulate the trained dual-head machine learning pipeline into a responsive, real-time web portal (Flask REST API, glassmorphism frontend) and deploy it to a global serverless cloud infrastructure for public accessibility.
@@ -503,20 +504,20 @@ The remainder of this thesis report is organized as follows:
 \label{sec:burnout_history}
 The conceptual foundation of burnout as a distinct psychological syndrome originated in the mid-1970s through the pioneering observational investigations of clinical psychologist Herbert Freudenberger \cite{freudenberger1974}. Observing the emotional and physical attrition of voluntary health workers at free medical clinics in New York City, Freudenberger characterized burnout as a state of mental and physical exhaustion caused by professional life's excessive demands. Simultaneously and independently, social psychologist Christina Maslach initiated systematic qualitative and empirical research into how human services personnel cope with emotional arousal, establishing the foundational tripartite operational definition of burnout: \emph{emotional exhaustion}, \emph{depersonalization}, and \emph{diminished personal accomplishment} \cite{maslach1981, maslach2001}.
 
-For the initial two decades of empirical inquiry (1975--1995), burnout was considered almost exclusively an occupational phenomenon confined to high-touch human services sectors—most notably healthcare professionals, nurses, social workers, and primary school educators. However, during the late 1990s and early 2000s, organizational psychologists recognized that undergraduate and postgraduate students engage in psychological and structured labor that closely mirrors professional occupations:
+For the initial two decades of empirical inquiry (1975--1995), burnout was considered almost exclusively an occupational phenomenon confined to high-touch human services sectors--most notably healthcare professionals, nurses, social workers, and primary school educators. However, during the late 1990s and early 2000s, organizational psychologists recognized that undergraduate and postgraduate students engage in psychological and structured labor that closely mirrors professional occupations:
 \begin{enumerate}
     \item Students participate in structured, coercive activities (attending mandatory lectures, completing compulsory assignments).
     \item Students operate under strict organizational hierarchies, accountability metrics, and evaluation deadlines.
     \item Academic success requires sustained, goal-directed cognitive investment where failure incurs severe social and financial penalties.
 \end{enumerate}
 
-Recognizing these structural parallels, Wilmar Schaufeli and colleagues \cite{schaufeli2002} adapted the universal Maslach Burnout Inventory into the \textbf{Maslach Burnout Inventory – Student Survey (MBI-SS)}. Cross-national validation studies conducted across universities in Spain, Portugal, the Netherlands, and later globally confirmed that academic burnout possesses identical tripartite psychometric validity among university student cohorts. Subsequent work by Demerouti, Bakker, and colleagues \cite{demerouti2001, bakker2014} contributed the \textbf{Job Demands-Resources (JD-R) Model}, which formalized burnout as a systemic energy-depletion process triggered when environmental demands exceed restorative personal resources.
+Recognizing these structural parallels, Wilmar Schaufeli and colleagues \cite{schaufeli2002} adapted the universal Maslach Burnout Inventory into the \textbf{Maslach Burnout Inventory -- Student Survey (MBI-SS)}. Cross-national validation studies conducted across universities in Spain, Portugal, the Netherlands, and later globally confirmed that academic burnout possesses identical tripartite psychometric validity among university student cohorts. Subsequent work by Demerouti, Bakker, and colleagues \cite{demerouti2001, bakker2014} contributed the \textbf{Job Demands-Resources (JD-R) Model}, which formalized burnout as a systemic energy-depletion process triggered when environmental demands exceed restorative personal resources.
 
 \section{Traditional Psychometric Instruments in Higher Education}
 \label{sec:psychometric_instruments}
 Historically, academic institutions have relied on standardized psychometric survey batteries administered either clinically or via institutional research surveys. The principal instruments documented in psychological literature include:
 
-\subsection{Maslach Burnout Inventory – Student Survey (MBI-SS)}
+\subsection{Maslach Burnout Inventory -- Student Survey (MBI-SS)}
 The MBI-SS remains the global gold standard for psychometric evaluation of student burnout \cite{schaufeli2002}. It comprises 15 self-report items scored on a 7-point frequency Likert scale ($0 = \text{``Never''}$ to $6 = \text{``Every day''}$), distributed across three subscales:
 \begin{itemize}
     \item \textbf{Exhaustion (EX) [5 items]:} Evaluates energy depletion induced by study demands (e.g., \emph{``I feel emotionally drained by my studies''}, \emph{``Studying or attending a class is really a strain for me''}).
@@ -585,7 +586,7 @@ Educational Data Mining (EDM) extracts student behavioral logs from institutiona
 \textbf{Critical Vulnerability:} LMS logs capture only formal digital course interactions; they possess zero visibility into restorative lifestyle determinants such as sleep duration, physical fitness, family support, or peer relationship strain.
 
 \subsection{Survey-Based Machine Learning Informatics}
-The fourth paradigm—within which this thesis resides—combines the psychometric interpretability of structured self-report inventories with the non-linear pattern recognition power of modern machine learning \cite{bano2022, aljohani2022}. By collecting structured, multi-dimensional indicators across academic, physical, social, and psychological domains via lightweight digital interfaces, machine learning models can evaluate complex interaction dynamics without requiring invasive physical sensors or constant location tracking.
+The fourth paradigm--within which this thesis resides--combines the psychometric interpretability of structured self-report inventories with the non-linear pattern recognition power of modern machine learning \cite{bano2022, aljohani2022}. By collecting structured, multi-dimensional indicators across academic, physical, social, and psychological domains via lightweight digital interfaces, machine learning models can evaluate complex interaction dynamics without requiring invasive physical sensors or constant location tracking.
 
 \section{Systematic Review of Seminal Related Works}
 \label{sec:systematic_review}
@@ -738,7 +739,7 @@ A comprehensive univariate statistical audit was conducted across all 3,000 reco
 \caption{Descriptive Summary Statistics of Continuous and Ordinal Features ($n = 3,000$)}
 \label{tab:descriptive_stats}
 \small
-\begin{tabularx}{\textwidth}{lrrrrrrrr}
+\begin{tabularx}{\textwidth}{Xrrrrrrrr}
 \toprule
 \textbf{Feature} & \textbf{Count} & \textbf{Mean} & \textbf{Std} & \textbf{Min} & \textbf{25\%} & \textbf{50\%} & \textbf{75\%} & \textbf{Max} \\
 \midrule
@@ -986,7 +987,7 @@ $\text{Multi-Tiered Automated Counseling Recommendation Engine}$ \\
 
 \section{Data Preprocessing Pipeline and Leakage Prevention}
 \label{sec:preprocessing_pipeline}
-A primary methodological deficiency in published educational data mining literature is \emph{data leakage}—the inadvertent contamination of training data with statistical properties of the test evaluation fold. When z-score normalization ($\mu, \sigma$) or target encoding is computed over the entire unpartitioned dataset prior to splitting, the model gains unearned prior knowledge about the test distribution, yielding artificially inflated, brittle performance metrics.
+A primary methodological deficiency in published educational data mining literature is \emph{data leakage}--the inadvertent contamination of training data with statistical properties of the test evaluation fold. When z-score normalization ($\mu, \sigma$) or target encoding is computed over the entire unpartitioned dataset prior to splitting, the model gains unearned prior knowledge about the test distribution, yielding artificially inflated, brittle performance metrics.
 
 \subsection{Stratified Train-Test Splitting}
 To guarantee methodological integrity:
@@ -1240,7 +1241,7 @@ Table~\ref{tab:master_benchmark} presents the comprehensive comparative performa
 \caption{Comprehensive Multi-Classifier Benchmark Performance Matrix ($n_{\text{test}} = 600$)}
 \label{tab:master_benchmark}
 \small
-\begin{tabularx}{\textwidth}{lrrrrrr}
+\begin{tabularx}{\textwidth}{Xrrrrrr}
 \toprule
 \textbf{Model Architecture} & \textbf{Train Acc} & \textbf{Test Acc} & \textbf{Macro Prec} & \textbf{Macro Rec} & \textbf{Macro F1} & \textbf{Latency (ms)} \\
 \midrule
@@ -1272,7 +1273,7 @@ To confirm that the outstanding performance of Logistic Regression was not an ar
 \caption{Stratified 5-Fold Cross-Validation Accuracy Matrix across Evaluated Models}
 \label{tab:cv_folds}
 \small
-\begin{tabularx}{\textwidth}{lrrrrrr}
+\begin{tabularx}{\textwidth}{Xrrrrrr}
 \toprule
 \textbf{Model Architecture} & \textbf{Fold 1} & \textbf{Fold 2} & \textbf{Fold 3} & \textbf{Fold 4} & \textbf{Fold 5} & \textbf{Mean $\pm$ Std} \\
 \midrule
@@ -1308,7 +1309,7 @@ Based on its superior generalization, interpretability, and microsecond latency,
 \caption{Granular Classification Report for Production Logistic Regression Model}
 \label{tab:classification_report}
 \small
-\begin{tabularx}{0.9\textwidth}{lrrrr}
+\begin{tabularx}{0.9\textwidth}{Xrrrr}
 \toprule
 \textbf{Burnout Risk Tier} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} & \textbf{Support ($n$)} \\
 \midrule
@@ -1349,7 +1350,7 @@ Out of 600 test cases, exactly **3 instances** were misclassified ($0.50\%$ erro
 \end{enumerate}
 
 \subsection{The Zero Cross-Tier Safety Guarantee}
-In biomedical and psychological screening systems, the most dangerous failure mode is a \emph{critical cross-tier false-negative}—namely, classifying a High-Risk patient as Low-Risk. As confirmed by Figure~\ref{fig:confusion_matrices}:
+In biomedical and psychological screening systems, the most dangerous failure mode is a \emph{critical cross-tier false-negative}--namely, classifying a High-Risk patient as Low-Risk. As confirmed by Figure~\ref{fig:confusion_matrices}:
 \begin{equation}
     P(\hat{Y} = \text{Low} \mid Y = \text{High}) = 0.0000, \qquad P(\hat{Y} = \text{High} \mid Y = \text{Low}) = 0.0000
 \end{equation}
@@ -1429,7 +1430,7 @@ Table~\ref{tab:ablation_results} summarizes the ablation metrics.
 \caption{Ablation Study: Impact of Domain-Specific Feature Engineering}
 \label{tab:ablation_results}
 \small
-\begin{tabularx}{0.9\textwidth}{lrrrr}
+\begin{tabularx}{0.9\textwidth}{Xrrrr}
 \toprule
 \textbf{Feature Regime} & \textbf{Test Accuracy} & \textbf{Macro F1} & \textbf{Medium-High Misclass} & \textbf{Linear Sep} \\
 \midrule
@@ -1522,9 +1523,9 @@ Upon submitting the assessment, the results pane smoothly animates into view:
 \begin{itemize}
     \item \textbf{Dynamic Risk Tier Badge:} Color-coded based on the predicted class:
     \begin{itemize}
-        \item \textbf{Green Badge (\#10b981):} \emph{Low Risk / Thriving} — Student possesses robust restorative buffers.
-        \item \textbf{Amber Badge (\#f59e0b):} \emph{Medium Risk / Early Warning} — Actionable warning indicating rising strain.
-        \item \textbf{Crimson Badge (\#ef4444):} \emph{High Risk / Urgent Care} — Critical warning triggering campus emergency support details.
+        \item \textbf{Green Badge (\#10b981):} \emph{Low Risk / Thriving} -- Student possesses robust restorative buffers.
+        \item \textbf{Amber Badge (\#f59e0b):} \emph{Medium Risk / Early Warning} -- Actionable warning indicating rising strain.
+        \item \textbf{Crimson Badge (\#ef4444):} \emph{High Risk / Urgent Care} -- Critical warning triggering campus emergency support details.
     \end{itemize}
     \item \textbf{Continuous Stress Gauge:} An interactive circular gauge displaying the continuous score ($0$--$100$) alongside historical cohort percentile context.
     \item \textbf{Class Probability Distribution:} Multi-bar visualizer showing exact softmax confidence percentages across all three tiers.
@@ -1581,7 +1582,7 @@ This major project thesis has developed, empirically validated, and publicly dep
 
 Operating on a statistically validated corpus of 3,000 diverse collegiate profiles, the investigation demonstrated that:
 \begin{enumerate}
-    \item \textbf{Domain-Specific Feature Engineering Outperforms Raw Model Complexity:} By mathematically formulating four composite interaction indices—the Academic Pressure Index (API), Screen-to-Sleep Ratio (SSR), Social Support Deficit (SSD), and Lifestyle Balance Score (LBS)—we transformed complex, non-linear psychological interactions into directly separable planar geometries, delivering a $+4.83\%$ boost in test accuracy.
+    \item \textbf{Domain-Specific Feature Engineering Outperforms Raw Model Complexity:} By mathematically formulating four composite interaction indices--the Academic Pressure Index (API), Screen-to-Sleep Ratio (SSR), Social Support Deficit (SSD), and Lifestyle Balance Score (LBS)--we transformed complex, non-linear psychological interactions into directly separable planar geometries, delivering a $+4.83\%$ boost in test accuracy.
     \item \textbf{Linear Regularization Dominates Multi-Class Burnout Triage:} Rigorous multi-algorithmic benchmarking across seven distinct paradigm families proved that $L_2$-regularized multinomial Logistic Regression achieved an extraordinary **$99.50\%$ test accuracy** and **$0.9950$ Macro F1-score**, outperforming non-linear kernel SVMs, Random Forests, and Gradient Boosted Decision Trees while operating at sub-millisecond ($0.42\text{ms}$) latency.
     \item \textbf{Absolute Clinical Triage Safety:} Confusion matrix audits across 600 independent hold-out test cases demonstrated **zero cross-tier false-negative error** between Low-Risk and High-Risk strata, guaranteeing that no critically burned-out student is erroneously categorized as safe.
     \item \textbf{Ultra-Calibrated Continuous Scoring:} Continuous Ridge regression achieved a near-perfect coefficient of determination ($R^2 = 1.0000$) with sub-millipoint root mean squared error ($\text{RMSE} = 0.000329$), providing counselors with an exact numerical metric ($0$--$100$) to track subtle longitudinal changes.
