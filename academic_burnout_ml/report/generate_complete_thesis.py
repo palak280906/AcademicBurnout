@@ -285,7 +285,7 @@ html_content = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Thesis: Early Detection of Academic Burnout - Amity University</title>
+  <title>Thesis: Early Detection of Academic Burnout using Machine Learning - Amity University</title>
   {css}
 </head>
 <body>
@@ -293,7 +293,7 @@ html_content = f"""<!DOCTYPE html>
   <!-- ================= PAGE 1: TITLE PAGE ================= -->
   <div class="title-page-container">
     <div>
-      <h1 class="thesis-title">Early Detection of Academic Burnout<br><span style="font-size: 15pt; font-weight: normal; text-transform: none;">Using Multi-Dimensional Machine Learning and Predictive Behavioral Informatics</span></h1>
+      <h1 class="thesis-title">Early Detection of Academic Burnout using Machine Learning<br><span style="font-size: 14pt; font-weight: normal; text-transform: none;">A Multi-Dimensional Predictive Behavioral Informatics System</span></h1>
       
       <p style="font-size: 13pt; font-style: italic; margin-top: 25px;">Major Project submitted to</p>
       <p style="font-size: 13pt; font-weight: bold;">Amity School of Engineering and Technology, Amity University</p>
@@ -304,8 +304,8 @@ html_content = f"""<!DOCTYPE html>
       <p style="font-size: 13pt; font-weight: bold;">Department of Computer Science and Engineering,<br>Amity School of Engineering and Technology</p>
 
       <p style="font-size: 12pt; font-style: italic; margin-top: 35px;">by</p>
-      <p style="font-size: 14pt; font-weight: bold;">Author Name</p>
-      <p style="font-size: 11pt; color: #475569;">(Enrollment No: A910119819008)</p>
+      <p style="font-size: 14pt; font-weight: bold;">Palak Goenka</p>
+      <p style="font-size: 11pt; color: #475569;">(Enrollment No: A357175124008)</p>
 
       <p style="font-size: 12pt; font-style: italic; margin-top: 15px;">under the guidance of</p>
       <p style="font-size: 14pt; font-weight: bold;">Prof. Supervisor</p>
@@ -331,7 +331,7 @@ html_content = f"""<!DOCTYPE html>
     <h1 style="text-align: center; font-size: 20pt; font-weight: bold; margin-bottom: 40px; text-transform: uppercase;">Certificate</h1>
 
     <p style="font-size: 12pt; line-height: 1.8; text-align: justify;">
-      This is to certify that the project work entitled <strong>“Early Detection of Academic Burnout”</strong> has been prepared by <strong>“Author Name”</strong> under my supervision and guidance. The thesis is his original work completed after careful research and investigation. The work of the thesis is of the standard expected of a candidate for the <strong>Bachelor of Technology Programme in Artificial Intelligence</strong> and I recommend that it be sent for evaluation.
+      This is to certify that the project work entitled <strong>“Early Detection of Academic Burnout using Machine Learning”</strong> has been prepared by <strong>“Palak Goenka”</strong> under my supervision and guidance. The thesis is his original work completed after careful research and investigation. The work of the thesis is of the standard expected of a candidate for the <strong>Bachelor of Technology Programme in Artificial Intelligence</strong> and I recommend that it be sent for evaluation.
     </p>
 
     <div style="margin-top: 80px;">
@@ -368,7 +368,7 @@ html_content = f"""<!DOCTYPE html>
     <h1 style="text-align: center; font-size: 20pt; font-weight: bold; margin-bottom: 40px; text-transform: uppercase;">Declaration</h1>
 
     <p style="font-size: 12pt; line-height: 1.8; text-align: justify;">
-      I, <strong>Author Name</strong>, registered as an undergraduate scholar, bearing <strong>Registration Number: A910119819008</strong> for the <strong>Bachelor of Technology Programme in Artificial Intelligence</strong> under the Amity School of Engineering and Technology of Amity University Jharkhand, do hereby declare that I have completed the requirements as per mentioned by the university for project submission.
+      I, <strong>Palak Goenka</strong>, registered as an undergraduate scholar, bearing <strong>Registration Number: A357175124008</strong> for the <strong>Bachelor of Technology Programme in Artificial Intelligence</strong> under the Amity School of Engineering and Technology of Amity University Jharkhand, do hereby declare that I have completed the requirements as per mentioned by the university for project submission.
     </p>
 
     <p style="font-size: 12pt; line-height: 1.8; text-align: justify; margin-top: 20px;">
@@ -383,7 +383,7 @@ html_content = f"""<!DOCTYPE html>
       <p style="font-size: 11pt;"><strong>Date:</strong> October 2026</p>
       <div style="float: right; text-align: center; margin-top: 30px; width: 300px;">
         <div style="border-top: 1px solid #000; padding-top: 5px; font-weight: bold;">Signature of Student</div>
-        <div style="font-size: 10pt;">Author Name (Enroll No: A910119819008)</div>
+        <div style="font-size: 10pt;">Palak Goenka (Enroll No: A357175124008)</div>
       </div>
       <div style="clear: both;"></div>
     </div>
@@ -398,15 +398,15 @@ html_content = f"""<!DOCTYPE html>
 
     <table class="meta-table">
       <tr>
-        <td><strong>Name of the student:</strong> Author Name</td>
-        <td><strong>Enroll No:</strong> A910119819008</td>
+        <td><strong>Name of the student:</strong> Palak Goenka</td>
+        <td><strong>Enroll No:</strong> A357175124008</td>
       </tr>
       <tr>
         <td><strong>Degree for which submitted:</strong> B.Tech (AI)</td>
         <td><strong>Department:</strong> CSE Department</td>
       </tr>
       <tr>
-        <td colspan="2"><strong>Project title:</strong> Early Detection of Academic Burnout</td>
+        <td colspan="2"><strong>Project title:</strong> Early Detection of Academic Burnout using Machine Learning</td>
       </tr>
       <tr>
         <td colspan="2"><strong>Project Guide:</strong> Prof. Supervisor</td>
@@ -453,8 +453,8 @@ html_content = f"""<!DOCTYPE html>
     </p>
 
     <div style="margin-top: 80px; text-align: right;">
-      <p style="font-weight: bold; margin-bottom: 2px;">Author Name</p>
-      <p style="font-size: 11pt; margin-bottom: 2px;">Enrollment No: A910119819008</p>
+      <p style="font-weight: bold; margin-bottom: 2px;">Palak Goenka</p>
+      <p style="font-size: 11pt; margin-bottom: 2px;">Enrollment No: A357175124008</p>
       <p style="font-size: 11pt; margin-bottom: 2px;">B.Tech (Artificial Intelligence)</p>
       <p style="font-size: 11pt;">Amity University Jharkhand, Ranchi</p>
     </div>

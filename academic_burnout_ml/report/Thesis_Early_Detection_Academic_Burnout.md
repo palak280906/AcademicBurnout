@@ -1,4 +1,4 @@
-# Early Detection of Academic Burnout
+# Early Detection of Academic Burnout using Machine Learning
 **Major Project submitted to**  
 **Amity School of Engineering and Technology, Amity University**  
 *in partial fulfilment of the requirements for the degree of*  
@@ -8,8 +8,8 @@
 **Amity School of Engineering and Technology**  
 
 **by**  
-**Author Name**  
-*(Enrollment No: A910119819008)*  
+**Palak Goenka**  
+*(Enrollment No: A357175124008)*  
 
 **under the guidance of**  
 **Prof. Supervisor**  
@@ -29,7 +29,7 @@
 
 ## Certificate
 
-This is to certify that the project work entitled **“Early Detection of Academic Burnout”** has been prepared by **“Author Name”** under my supervision and guidance. The thesis is his original work completed after careful research and investigation. The work of the thesis is of the standard expected of a candidate for the **Bachelor of Technology Programme in Artificial Intelligence** and I recommend that it be sent for evaluation.
+This is to certify that the project work entitled **“Early Detection of Academic Burnout using Machine Learning”** has been prepared by **“Palak Goenka”** under my supervision and guidance. The thesis is his original work completed after careful research and investigation. The work of the thesis is of the standard expected of a candidate for the **Bachelor of Technology Programme in Artificial Intelligence** and I recommend that it be sent for evaluation.
 
 <br><br><br>
 
@@ -65,7 +65,7 @@ Amity University Jharkhand, Ranchi
 
 ## Declaration
 
-I, **Author Name**, registered as an undergraduate scholar, bearing **Registration Number A910119819008** for the **Bachelor of Technology Programme in Artificial Intelligence** under the Amity School of Engineering and Technology of Amity University Jharkhand, do hereby declare that I have completed the requirements as per mentioned by the university for project submission.
+I, **Palak Goenka**, registered as an undergraduate scholar, bearing **Registration Number A357175124008** for the **Bachelor of Technology Programme in Artificial Intelligence** under the Amity School of Engineering and Technology of Amity University Jharkhand, do hereby declare that I have completed the requirements as per mentioned by the university for project submission.
 
 I do hereby declare that the project submitted is original and is the outcome of the independent investigations / research carried out by me and contains no plagiarism. The work is leading to the discovery of new techniques in predictive educational analytics and mental well-being informatics. This work has not been submitted by any other University or Body in quest of a degree, diploma, or any other kind of academic award.
 
@@ -79,7 +79,7 @@ I do hereby further declare that the text, diagrams, or any other material taken
 
 ______________________________________  
 **Signature of Student**  
-Enrollment No: A910119819008  
+Enrollment No: A357175124008  
 B.Tech (Artificial Intelligence)  
 Department of Computer Science and Engineering  
 
@@ -93,11 +93,11 @@ Department of Computer Science and Engineering
 
 | Attribute | Details |
 | :--- | :--- |
-| **Name of the Student** | Author Name |
-| **Enrollment Number** | A910119819008 |
+| **Name of the Student** | Palak Goenka |
+| **Enrollment Number** | A357175124008 |
 | **Degree Submitted For** | Bachelor of Technology in Artificial Intelligence — B.Tech (AI) |
 | **Department** | Department of Computer Science and Engineering |
-| **Project Title** | Early Detection of Academic Burnout |
+| **Project Title** | Early Detection of Academic Burnout using Machine Learning |
 | **Project Guide** | Prof. Supervisor |
 | **Month and Year** | October 2026 |
 
@@ -127,8 +127,8 @@ I also extend my heartfelt thanks to all faculty members, technical staff, and p
 
 <br><br>
 
-**Author Name**  
-Enrollment No: A910119819008  
+**Palak Goenka**  
+Enrollment No: A357175124008  
 B.Tech (Artificial Intelligence)  
 Amity University Jharkhand  
 
