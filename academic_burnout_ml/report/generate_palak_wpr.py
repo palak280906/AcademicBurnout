@@ -138,7 +138,7 @@ for item in wpr_data:
           <div class="meta-left"><strong>Enroll No.:</strong> <u>A357175124008</u></div>
         </div>
         <div class="meta-row" style="margin-top: 4px;">
-          <div><strong>Title:</strong> <u>Early Detection of Academic Burnout</u></div>
+          <div><strong>Title:</strong> <u>Early Detection of Academic Burnout using Machine Learning</u></div>
         </div>
         <div class="meta-report-row">
           <em><u>NTCC Weekly Progress Report (Minor Project): Wk. No: {item['wk_no']}</u></em> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <em><u>Duration: {item['duration']}</u></em>
